@@ -1,7 +1,12 @@
 [build]
   publish = "."
 
-# Clean URL redirects by destination
+# Clean URL redirects by destination (city-level first, then country-level)
+[[redirects]]
+  from = "/guides/vietnam/hanoi/*"
+  to = "/articles/vietnam/hanoi/:splat.html"
+  status = 200
+
 [[redirects]]
   from = "/guides/vietnam/*"
   to = "/articles/vietnam/:splat.html"
